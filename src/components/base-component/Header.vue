@@ -15,12 +15,12 @@
         </li>
       </ul>
     </div>
+    <div class="clear"></div>
   </div>
-  <div class="clear"></div>
 </template>
 <script lang="ts">
 import { defineComponent, PropType, ref } from "vue";
-import {HeaderNav} from './types'
+import { HeaderNav } from "./types";
 export default defineComponent({
   props: {
     logo: String,
@@ -29,7 +29,7 @@ export default defineComponent({
       required: true,
     },
   },
-  emits:['menu-change'],
+  emits: ["menu-change"],
   setup(props, context) {
     console.log(props, context);
     const currentMenuIndex = ref(0);
@@ -42,22 +42,27 @@ export default defineComponent({
       menuClick,
     };
   },
-  watch:{
-    $route(n,o){
-      if(o.path=='/'){
-        this.navs.forEach((item,index)=>{
-          if(item.componetPath==n.path){
-            this.currentMenuIndex =index
+  watch: {
+    $route(n, o) {
+      if (o.path == "/") {
+        let exist = false
+        this.navs.forEach((item, index) => {
+          if (item.componetPath == n.path) {
+            exist =true
+            this.currentMenuIndex = index;
           }
-        })
+        });
+        if(!exist){
+          this.currentMenuIndex = -1
+        }
       }
-    }
-  }
+    },
+  },
 });
 </script>
 <style scoped>
-.header{
-  position:fixed;
+.header {
+  position: fixed;
   width: 100%;
   height: 45px;
   top: 0px;

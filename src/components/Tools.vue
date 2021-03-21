@@ -13,9 +13,6 @@ export default defineComponent({
   components:{
     Clock
   },
-  mounted(){
-    console.log("Tools rendering")
-  }
 });
 </script>
 <style scoped>

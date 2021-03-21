@@ -110,13 +110,13 @@ export default defineComponent({
     this.canvas = document.getElementById("canvas") as HTMLCanvasElement;
     this.ctx = this.canvas.getContext("2d") as CanvasRenderingContext2D;
     this.loadCanvasResource();    
-    console.log("Clock rendering")
   },
 });
 </script>
 <style scoped>
 .clock{
   position: fixed;
-  right: 5%;
+  right: 8%;
+  top: 35%;
 }
 </style>

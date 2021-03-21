@@ -14,7 +14,7 @@ export default defineComponent({
         reactive<HeaderNav>({ title: "博文记录", componetPath: "/post" }),
         reactive<HeaderNav>({ title: "Q&A", componetPath: "/test" }),
         reactive<HeaderNav>({ title: "工具", componetPath: "/test" }),
-        reactive<HeaderNav>({ title: "外语", componetPath: "/test" }),
+        reactive<HeaderNav>({ title: "外语", componetPath: "/language" }),
       ],
       currentComponent: "post",
     };
