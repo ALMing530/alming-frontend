@@ -1,5 +1,6 @@
 # alming-frontend
-
+## A personal websit that implement in vue3.
+This project is refactor from "alming-backend-old" which implement in vue2. 
 ## Project setup
 ```
 npm install

@@ -17,7 +17,7 @@ export default defineComponent({
     const post = ref<Post>();
     const { postId } = toRefs(props);
     const getPost = () => {
-      get("/post?id=" + postId?.value).then((res) => {
+      get("/post/" + postId?.value).then((res) => {
         post.value = res.data as Post;
       });
     };

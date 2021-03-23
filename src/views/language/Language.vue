@@ -4,7 +4,7 @@
     <div class="item">
       <div class="hang-line hang-line-1"></div>
       <div class="menu-container">
-        <div class="menu">英语单词</div>
+        <div @click="words" class="menu">英语单词</div>
       </div>
     </div>
     <div class="item">
@@ -23,6 +23,9 @@ export default defineComponent({
     methods:{
         map(){
             this.$router.push("/map")
+        },
+        words(){
+          this.$router.push("/english")
         }
     }
 });
